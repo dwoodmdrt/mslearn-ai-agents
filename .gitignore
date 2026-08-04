@@ -73,3 +73,8 @@ Thumbs.db
 # Output files
 analysis_results.json
 output.txt
+
+# Local env files.
+**/.env
+**/.env.local
+**/.env.*.local
