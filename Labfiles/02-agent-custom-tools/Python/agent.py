@@ -165,14 +165,14 @@ def main():
                     elif item.name == "generate_observation_report":
                         result = generate_observation_report(**json.loads(item.arguments))
 
-                # Append the output text
-                input_list.append(
-                    FunctionCallOutput(
-                        type="function_call_output",
-                        call_id=item.call_id,
-                        output=result,
+                    # Append the output text
+                    input_list.append(
+                        FunctionCallOutput(
+                            type="function_call_output",
+                            call_id=item.call_id,
+                            output=result,
+                        )
                     )
-                )
 
             # Send function call outputs back to the model and retrieve a response
             if input_list:
